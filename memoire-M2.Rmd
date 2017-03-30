@@ -1,0 +1,73 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Les citations d'Aristophane dans les Deipnosophistes d'Athénée de Naucratis: méthodes, analyses, et critiques numériques
+
+## Les objectifs, la démarche, les méthodes.
+
+Partie consacrée au protocole expérimental. Qu'est-ce qu'on veut faire, avec quels outils, et comment on va s'y prendre.
+
+<!--update des objectifs: 29/03-->
+### Objectifs:
+
+1. extraire du corpus retenu les noms d'auteurs, les noms des oeuvres, et les citations, pour en faire un tableau exploitable (autrement dit: comment baliser/exploiter un balisage, de manière un peu artisanale et sans utiliser la TEI parce que faire une édition prendrait beaucoup trop de temps)
+
+2. TO DO avec les noms d'auteurs:
+  - voir leur fréquence d'apparition
+  - voir les fréquences relatives (quels sont les auteurs le plus cités avec Aristophane?)
+  - voir si leur ordre d'apparition est pertinent, s'il y a des séquences récurrentes
+  - proposer une visualisation des résultats, pour essayer de les rendres accessibles et lisibles (voir démarche, sur le problème que posent l'exhaustivité et la lisibilité): sous forme de nuage (c'est probablement le plus simple), mais aussi éventuellement sous forme de toile, pour essayer de reprendre l'idée de "mapping" des citations
+  - quel lien entre Aristophane et les autres comiques, liens entre Aristophane et les autres types d'auteurs? (faire quelques stats, voir le rapport entre séquence d'auteurs cités et sujet traité dans la discussion)
+  
+3. TO DO avec les noms d'oeuvres:
+  - voir leur fréquence d'apparition
+  - voir les fréquences relatives (y a-t-il des oeuvres citées fréquemment en association avec d'autres? quand plusieurs oeuvres du même auteur sont citées, sont-ce les mêmes, et y a-t-il des séquences?)
+  - voir s'il y a des séquences (comme pour les noms d'auteurs, est-ce qu'il y a une hiérarchie de la citation?)
+  - chercher un moyen de donner à voir les résultats: nuages de mots et mapping. Il peut être intéressant de faire une comparaison des résultats obtenus avec ceux des noms d'auteurs. Mêmes résultats? Quelles différences, s'il y en a?
+  - (éventuellement: rapport entre titre d'oeuvres d'Aristophane et titres d'oeuvres d'autres comiques, et rapport titres d'Aristophane/titres d'auteurs non-comiques)
+
+4. TO DO avec les citations (aka le gros morceau)
+  - même travail sur les fréquences et corrélations de mots, pour voir quels sont les thèmes privilégiés, si un champ lexical se détache
+  - quels sont les sujets les plus fréquemment associés à des citations d'Aristophane? (faire un peu de topic modelling là-dessus, probablement)
+  - comparer contenu/style/lexique des citations d'Aristophane avec les autres citations du contexte: proximité? points communs? différences? (variations orthographiques, morphologiques?) longueur? 
+  - protocole CTS: voir comment on peut mapper/identifier les citations d'Aristophane efficacement, y compris sur des oeuvres pour lesquelles nous n'avons pas de référence (fragments des oeuvres perdues), avec quels identifiants (puisque pas d'édition des fragments d'Aristophane sur Perseus, il faut une source qui soit libre de droits quand même). Voir comment on peut retrouver/traiter la paraphrase, comment on peut faire des renvois sur les mentions de nom d'Aristophane dans le cas où il n'y a pas de citation directe.
+  - à partir de ce mappage: quelles sont les possibilités de renvoi à d'autres oeuvres? quels autres auteurs citent Aristophane, et peut-on y renvoyer également? 
+  - question de la visualisation: protocole CTS est très précis (sur le papier du moins), mais quel usage peut-on en faire? Comment visualiser ce mappage? Peut-on créer une sorte de "toile", qui relie Aristophane à Athénée, à d'autres citations, à d'autres auteurs cités? Comment intégrer ça efficacement et lisiblement aux métadonnées d'une édition numérique? 
+
+5. TO DO avec le contexte des citations:
+  - voir les mots et expressions, tournures de phrases, fréquemment employées pour citer (on voit des patterns à l'oeil nu, est-ce que numériquement on peut obtenir des stats plus précises?)
+  - y a-t-il des séquences? Si oui, sont-elles significatives? Y a-t-il des expressions utilisées plus souvent que d'autres? (ces résultats ne seront pas forcément pertinents, le but est d'arriver à le faire, au cas où ça le serait)
+  - y a-t-il un rapport entre l'expression employée pour introduire la citation et la nature de l'oeuvre citée/l'auteur de l'oeuvre citée/le contenu de la citation elle-même?
+  - Peut-on identifier le locuteur à sa manière d'introduire les citations? 
+  - qui cite, à quelle fréquence, et quel type d'oeuvres? (dans la mesure où c'est pertinent pour les auteurs comiques et plus précisément Aristophane). voir si on peut mettre en rapport la quantité totale de parole attribuée aux différents locuteurs et les citations d'Aristophane. Sont-ce tjr les mêmes personnes qui le cite? Est-ce qu'on peut en tirer une conclusion sur le plan culturel?
+
+
+### Démarche et méthodes
+
+A définir une fois que les objectifs seront validés, et que les premiers tests commenceront à ressembler à qqch.
+
+## Tentatives et résultats
+
+A rédiger au fur et à mesure? Comme un journal d'expérience? Faire apparaître les morceaux de code, éventuellement?
+
+## Critique méthodologique: ce qu'on ne sait pas encore faire numériquement, mais qui nous simplifierait la vie
+
+Cette partie sera consacrée au bilan et à la réflexion sur les outils mis en oeuvre, au vu des résultats obtenus.
+
+1. Quelle pertinence des résultats?
+  - qu'est-ce qui a été utile? Qu'est-ce qu'on en a tiré, concrètement? 
+  - qu'est-ce qui n'est pas exploitable, et pourquoi?
+
+2. Qu'est-ce qui n'a pas marché du tout?
+  - les échecs: ce qu'on a voulu faire, mais qu'on n'a pas pu/su coder
+  - d'où vient l'échec? manque de temps? manque de moyens? moyens inaccessibles à ce niveau? moyens bidouillables mais inadaptés, donc résultats qui ne sont pas ceux attendus?
+
+3. Les limites des choses réussies
+  - les outils mis en oeuvres: à quel point sont-ils adaptés? Quel travail resterait à faire dessus pour rendre ça plus approprié à la recherche en lettres/aux humanités?
+  - la lisibilité des résultats, l'accessibilité: quelle visualisation possible?
+  - pour aller vers une possible édition numérique: qu'est-ce qui aurait été pratique pour faciliter tout ce travail? Quelle édition pour quelle exploitation dans le cadre de la critique littéraire? Comment intégrer ces résultats aux métadonnées?
+
+4. Le protocole CTS?
+
